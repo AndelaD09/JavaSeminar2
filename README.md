@@ -1,2 +1,2 @@
 # andela
-&lt;3
+&lt;
