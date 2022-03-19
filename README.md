@@ -7,7 +7,7 @@
 ### [Languages](Languages)
 ### [Author](Author)
 
-## [General]
+## General
 Simple web app ideal for stores that have too much traffic and too little staff.
 
 ## Feature
