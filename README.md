@@ -43,5 +43,5 @@ Simple web app ideal for stores that have too much traffic and too little staff.
   + HTML5
   + Java8
 
-&lt;
+
 
