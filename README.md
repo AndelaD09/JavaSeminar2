@@ -3,5 +3,5 @@
 ### General Info
 ### Feature
 ### Technologies
-###n Author
+### Author
 &lt;
