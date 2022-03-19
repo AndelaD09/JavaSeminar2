@@ -1,13 +1,13 @@
 # MySmartRegister
 ## Table of Content
 
-### [General Info](General Info)
+### [General](General)
 ### [Feature](Feature)
 ### [Technologies](Tehnologies)
 ### [Languages](Languages)
 ### [Author](Author)
 
-## General Info
+## General
 Simple web app ideal for stores that have too much traffic and too little staff.
 
 ## Feature
