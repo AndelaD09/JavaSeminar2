@@ -1,2 +1,2 @@
-# andela
+# MySmartRegister
 &lt;
