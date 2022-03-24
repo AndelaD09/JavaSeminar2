@@ -8,15 +8,16 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "cathegory")
-@SQLDelete(sql = "update cathegory set delete = true where ID=?")
+@Table(name = "privilege")
+@SQLDelete(sql = "update privilege set delete = true where ID=?")
 @Where(clause = "delete = false")
 @Entity
-public class Cathegory {
+public class Privilege {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
@@ -25,7 +26,6 @@ public class Cathegory {
     @Column
     private String name;
 
-    @Column
-    private boolean delete = false;
-
+    @ManyToMany(mappedBy = "privileges")
+    private Collection<Role> roles;
 }

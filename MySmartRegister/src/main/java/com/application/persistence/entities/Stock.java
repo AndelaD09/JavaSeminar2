@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,6 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "stock")
+@SQLDelete(sql = "update stock set delete = true where ID=?")
+@Where(clause = "delete = false")
 @Entity
 public class Stock {
     @Id
@@ -22,6 +26,9 @@ public class Stock {
     @Column
     private String name;
 
-    @OneToMany(targetEntity = Product.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Product> products;
+    @OneToOne(targetEntity = Product.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Product products;
+
+    @Column
+    private boolean delete = false;
 }

@@ -4,11 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "invoice_per_product")
+@Table(name = "receipt_per_product")
+@SQLDelete(sql = "update receipt_per_product set delete = true where ID=?")
+@Where(clause = "delete = false")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,4 +30,7 @@ public class ReceiptPerProduct {
 
     @Column
     private long totalPrice;
+
+    @Column
+    private boolean delete = false;
 }
