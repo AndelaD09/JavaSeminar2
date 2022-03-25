@@ -35,6 +35,8 @@ Simple web app ideal for stores that have too much traffic and too little staff.
 ## Technologies
   + Postman
   + SpringBoot
+  + Tyhmeleaf
+  + Bootstrap
   + Maven
   + Hybernate
   + MySQL Workbench
