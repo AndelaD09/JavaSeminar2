@@ -1,4 +1,4 @@
-# MySmartRegister
+# MyCashMachine
 ## Table of Content
 
 ### [General](General)
@@ -8,23 +8,21 @@
 ### [Author](Author)
 
 ## General
-Simple web app ideal for stores that have too much traffic and too little staff.
+Simple cash mashine register for users that are not familiar with complicated technologies.
 
 ## Feature
   ### User Management
     + registration and login process
-      + as a costumer
-        + none
-      + as an employee
-        + a special code number that identifies each employee
+      + as an employee/administrator
+        + a special code number that identifies each employee/administrator
     + available content
-      	+ costumer 
-          + only goods for sale, prices, discounts
-        + employee
-          + everything else
+      	+ employer
+          + products in stock, all categories
+        + administrator
+          + crud operations over users/products/categories
   
   ### Main menu
-    + login roles (login as an employee - locked and login as costumer)
+    + login roles (login as an employee - locked and login as administrator
     + goods of the day
     + discounts
     
